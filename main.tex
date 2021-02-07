@@ -1,0 +1,174 @@
+
+\documentclass[10pt]{article} 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage[siunitx]{circuitikz}
+\usepackage{tikz}
+\usepackage[colorinlistoftodos, color=orange!50]{todonotes}
+\usepackage[numbers, square]{natbib}
+\usepackage{fancybox}
+\usepackage{epsfig}
+\usepackage{soul}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage[version=4]{mhchem}
+\usepackage{multicol}
+\usepackage[hidelinks]{hyperref}
+
+
+
+
+\newcommand{\blah}{blah blah blah \dots}
+
+
+\setlength{\marginparwidth}{3.4cm}
+
+
+% NEW COUNTERS
+\newcounter{points}
+\setcounter{points}{100}
+\newcounter{spelling}
+\newcounter{english}
+\newcounter{units}
+\newcounter{other}
+\newcounter{source}
+\newcounter{concept}
+\newcounter{missing}
+\newcounter{math}
+\newcounter{terms}
+\newcounter{clarity}
+\newcounter{late}
+
+% COMMANDS
+
+\newcommand{\late}{\todo{late submittal (-5)}
+\addtocounter{late}{-5}
+\addtocounter{points}{-5}}
+
+\definecolor{pink}{RGB}{255,182,193}
+\newcommand{\hlp}[2][pink]{ {\sethlcolor{#1} \hl{#2}} }
+
+\definecolor{myblue}{rgb}{0.668, 0.805, 0.929}
+\newcommand{\hlb}[2][myblue]{ {\sethlcolor{#1} \hl{#2}} }
+
+\newcommand{\clarity}[2]{\todo[color=CornflowerBlue!50]{CLARITY of WRITING(#1) #2}\addtocounter{points}{#1}
+\addtocounter{clarity}{#1}}
+
+\newcommand{\other}[2]{\todo{OTHER(#1) #2} \addtocounter{points}{#1} \addtocounter{other}{#1}}
+
+\newcommand{\spelling}{\todo[color=CornflowerBlue!50]{SPELLING (-1)} \addtocounter{points}{-1}
+\addtocounter{spelling}{-1}}
+\newcommand{\units}{\todo{UNITS (-1)} \addtocounter{points}{-1}
+\addtocounter{units}{-1}}
+
+\newcommand{\english}{\todo[color=CornflowerBlue!50]{SYNTAX and GRAMMAR (-1)} \addtocounter{points}{-1}
+\addtocounter{english}{-1}}
+
+\newcommand{\source}{\todo{SOURCE(S) (-2)} \addtocounter{points}{-2}
+\addtocounter{source}{-2}}
+\newcommand{\concept}{\todo{CONCEPT (-2)} \addtocounter{points}{-2}
+\addtocounter{concept}{-2}}
+
+\newcommand{\missing}[2]{\todo{MISSING CONTENT (#1) #2} \addtocounter{points}{#1}
+\addtocounter{missing}{#1}}
+
+\newcommand{\maths}{\todo{MATH (-1)} \addtocounter{points}{-1}
+\addtocounter{math}{-1}}
+\newcommand{\terms}{\todo[color=CornflowerBlue!50]{SCIENCE TERMS (-1)} \addtocounter{points}{-1}
+\addtocounter{terms}{-1}}
+
+
+
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+
+
+\title{
+\normalfont \normalsize 
+\textsc{The University of Texas at Austin \\ 
+Optics and Lasers (ME 382P 2), Spring 2021} \\
+[10pt] 
+\rule{\linewidth}{0.5pt} \\[6pt] 
+\huge Individual Report 1 \\
+\rule{\linewidth}{2pt}  \\[10pt]
+}
+\author{Juliette I. Franqueville}
+\date{\normalsize February 2021}
+
+
+
+\makeatletter         
+\def\@maketitle{
+\raggedright
+\begin{center}
+\includegraphics[width = 40mm]{utlogo.png}\\[15ex]
+
+{\Huge \bfseries \sffamily \@title }\\[4ex] 
+{\Large  \@author}\\[4ex] 
+\@date\\[8ex]
+\end{center}}
+\makeatother
+
+
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+
+\section{Abstract}
+ 
+
+\section{Introduction}
+In this lab, two of the most commonly used photodetectors were studied: a photodiode (PD) and a photomultiplier tube (PMT). A red (632.8 nm) Helium-Neon gas laser (HeNe) was used to illuminate the detectors. The experiments conducted allowed the group to become familiar with how these photodectectors work and study their advantages and disadvantages. The first section consisted of verifying the linear relationship between the logarithmic decay of laser intensity and the Neutral Density (ND) filters used to control optical power for the remaining experiments. Then, both detectors were illuminated at different optical powers in order to measure their sensitivity. For the PMT, this step was repeated for multiple control voltages. The gain and quantum efficiency of the PMT were calculated at different control voltages by recording dark pulses on the oscilloscope and measuring their average time constant and peak voltage. Lastly, shot noise present in PMT measurements was recorded at several optical powers and compared to theoretical values. This allowed to determine whether the data was shot noise limited.
+
+
+
+\section {Experimental Setup}
+
+
+
+
+
+
+
+
+
+
+
+\section {Analysis and Discussion}
+\subsection{Neutral Density Filters Measurements}
+\subsection{Photodiode Sensitivity}
+\subsection{Photomultiplier Tube Sensitivity}
+\subsection{Photomultiplier Tube Gain}
+\subsection{Shot Noise}
+\section {Conclusion}
+
+
+\section {References}
+
+
+
+
+
+
+
+
+
+
+\section{Conclusion}
+
+
+
+
+
+\end{document}
